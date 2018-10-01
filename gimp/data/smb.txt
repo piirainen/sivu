@@ -1,0 +1,4 @@
+Samba-palvelin (openSUSE)
+
+Samba on tiedostonjakopalvelu pääosin Windows-järjestelmille.
+

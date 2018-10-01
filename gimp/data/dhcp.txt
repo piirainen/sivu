@@ -1,0 +1,3 @@
+DHCP-palvelin (openSUSE)
+
+DHCP-palvelin määrittää verkon laitteiden IP-osoitteet automaattisesti.

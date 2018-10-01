@@ -1,0 +1,28 @@
+﻿NFS-palvelin (CentOS 7)
+
+<<<<<<< HEAD
+Linux-palvelimelle voi tehdä turvallisen NFS-verkkokansion vsftpd-ohjelmalla.
+
+Ensin palvelimelle kuuluu asentaa vsftd-paketti suosikkipakettimanageristasi, ja asettaa kiinteä IP-osoite. Myös portit 30000-30100 ja 20-21 on hyvä avata nyt, esim. firewall-cmd:tä käyttäen.
+
+Nyt voi kokeilla pystyykö palvelimeen yhdistämään. vsftpd käynnistetään "service vsftpd start"-komennolla, ja yhdistämme jollain muulla samassa verkossa olevalla laitteen selaimella palvelimen ip-ositteeseen, tyylillä ftp://x.x.x.x/.
+=======
+Linux-palvelimelle voi tehdä turvallisen NFS-verkkokansion vsftpd-palvelulla.
+
+Ensin palvelimelle kuuluu asentaa vsftd-paketti suosikkipakettimanageristasi, ja asettaa kiinteä IP-osoite. Myös portit 30000-30100 ja 20-21 ovat hyvä avata.
+CentOS 7-distrolla IP-osoite vaihdetaan muokaamalla adapterin asetuksia /etc/sysconfig/network-scripts/-hakemistossa, ja käynnistämällä 'network' palvelu uudelleen.
+
+Nyt voi kokeilla pystyykö palvelimeen yhdistämään. vsftpd käynnistetään 'service vsftpd start'-komennolla. Yhdistämme jollain muulla laittella palvelimen ip-ositteeseen, tyyliin ftp://x.x.x.x/.
+>>>>>>> 6a3dc030d4566a403c0827aadfdb9fd93b0912c3
+
+Mikäli kaikki on kunnossa, voimme seuraavaksi siirtyä vsftpd:n konfiguroimiseen joko /etc/vsftpd.conf osoiteesta löytyvästä tiedostosta, tai openSUSE:n tapauksessa "yast2 ftp-server" gui:ta käyttäen. Alkuperäisestä tiedostosta on joka tapauksessa hyvä tehdä kopio, esim. vsftpd.conf.old.
+
+<<<<<<< HEAD
+Aseta kirjautuneille käyttäjille hakemisto, jonka chmod 775:sit aiemmin. Laita "chroot" päälle, ettei käyttäjät pääse alempiin järjestelmän hakemistoihin käsiksi. Ota anonyymit kirjautumiset pois käytöstä, ja valitessasi salli uploadaaminen.
+
+Käynnistä vsftpd-palvelu uudelleen. Nyt tietokoneen käyttäjät voivat kirjautua palvelimelle, ja pääsevät käyttämään asetettua hakemistoa.
+
+Petrus Piirainen, 2018-10-01
+=======
+Tallennamme tiedoston, ja aloitamme vsftpd-palvelun komennolla "service vsftpd start".
+>>>>>>> 6a3dc030d4566a403c0827aadfdb9fd93b0912c3

@@ -1,0 +1,19 @@
+﻿Active Directory (Windows Server 2016)
+
+Active Directory on palvelu Windows-toimialueille, joka mahdollistaa käyttätilien hallinnan paikallisessa verkossa.
+
+AD asennetaan Windows-palvelimelle Server Managerista. Myös tarvitset DHCP- ja DNS-palvelun. Asennus kehottaa luomaan metsän ja toimialueen. Palvelimelle on nyt hyvä asettaa kiinteä IP-osoite.
+
+DHCP-palvelimen asetuksista pitää määrittää "scope"- IP-alue jota yhdistettävät tietokoneet tulevat käyttämään. Nyt on hyvä ottaa pois käytöstä verkon mahdolliset muut DHCP-palvelimet.
+
+Tietokoneita lisätään toimialueelle kirjautumalla paikallisella Administrator-tilillä, ja lisäämällä kone "System Properities":ssa toimialueen osalliseksi. Kun tietokone on liittynyt toimialueelle, sen nimi ja IP-osoite tulee näkyviin serverin DHCP-manageriin.
+
+Yhdistetylle tietokoneelle voi nyt kirjautua toimialueen käyttäjätileillä.
+
+Toimialueen käyttäjiä ja liitettyjä koneita voi hallita ”Users and Computers”-ohjelmasta. Käyttäjien ”properties”-sivulta voi esim. muuttaa salasanan, käyttöoikeustason, tai kirjautumiseen käytettävän nimen. Tietokoneiden "properities"-sivulta pystyy vaihtamaan mihin ryhmään tietokone kuuluu.
+
+Käyttäjiä voi kopioida nopeuttaaksesi useiden tilejä kerralla luontia. Luomalla ”Organizational Unit”:eja voi järjestellä käyttäjiä.
+
+Toimialueen käytäntöjä voi hallita ”Group Policy Management”:ista. Erillisille OU:lle voi luoda ”Group Policy Object”:in, jolla voi esim. muuttaa salasanojen vaatimuksia.
+
+Petrus Piirainen, 2018-09-26

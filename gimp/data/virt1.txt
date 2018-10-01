@@ -1,0 +1,23 @@
+﻿Virtuaalityöaseman asennus (openSUSE)
+
+QEMU on virtualisointiohjelma pääosin Linux-käyttöjärjestelmille. Jotta QEMU:n saa pihisemään, tarvitsee kulissien takana toimivan hypervisiorin esim. Xenin tai KVM:n, ja lisäksi vaihtoehoisen graafisen hallintaohjelman. Tässä dokumentissa käytämme KVM:ää ja virt-manager GUI:ta openSUSE Linux-käyttöjärjestelmällä, ja asennamme Windows Server 2016:n.
+
+Ensin asennamme qemu, qemu-kvm, ja virt-manager paketit. Useimmat Linux-distrot löytävät lisäksi tarvitut paketit automaattisesti, kuten. libvirt:n.
+
+Käynnistämme libvirtd.servicen ja avaamme virt-managerin päästäksemme asentamaan virtuaalikonetta.
+
+Valitset asennusmedian levykuvan, luot virtuaalisen levyn, valitset asennettavan käyttöjärjestelmän mallin, määrität kuinka monta suoritinta ja paljon keskusmuistia virtuaalikone saa käyttää, ja valitset miten virtuaalikone muodostaa verkkoyhteyden.
+
+Asennusohjelman lopussa voit valita siirtyä hienosäätämään asetuksia ennen virtuaalikoneen käynnistystä.
+
+Muutamme virtuaalisen levyn ja virtuaalisen verkon tyypin VirtIO:ksi. VirtIO mahdollistaa lähes alkuperäistä vastaavan suorituskyvyn, mutta tarvitset VirtIO-ajurit jotta laitteet toimivat. Asentaessa Linuxia, ajurit löytyvät valmiiksi kernelistä, mutta Windows vaatii ajureiden manuaalisen asennuksen. Siis lataamme myös levykuvan ajureille, ja lisäämme virtuaalikoneeseen IDE-levynä.
+
+QEMU/KVM mahdollistaa PCI-laitteiden läpiviennin virtuaalikoneille mikäli tietokone tukee VT-d teknologiaa, muttemme tässä tapauksessa koske ominaisuuteen.
+
+Voimme poistaa turhat laitteet kuten virtuaalisen äänen, vaihdamme ohjelmiston BIOS:esta UEFI:ksi, ja voimme käynnistää virtuaalikoneen.
+
+Asennus hoituu normaalisti, paitsi että joudut asentamaan VirtIO-ajurit asennusohjelmassa jotta saat virtuaalilevyn näkymään.
+
+Asennuksen suoritettua löydät itsesi virtuaaliselta Windows-työpöydältä. Asenna VirtIO ajurit verkko-ohjaimelle jotta saat muodostettua yhteyden internetiin.
+
+Petrus Piirainen, 2018-09-10
