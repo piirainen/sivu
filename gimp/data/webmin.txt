@@ -1,5 +1,5 @@
-Palvelimen etähallinta Webminillä (openSUSE)
-
+﻿Palvelimen etähallinta Webminillä (openSUSE)
+  
 Webmin mahdollistaa palvelimien valvonnan ja hallinnan verkon kautta.
 Webmin asennetaan palvelimelle joko valmiista reposta, tai manuaalisesti Webminin verkkosivulta.
 
@@ -8,5 +8,7 @@ Aloitaaksemme asennuksen, yhdistämme kohdepalvelimelle verkon kautta SSH:tä k�
 Portti 10000 täytyy avata palvelimella, esim. firewall-cmd:tä käyttäen.
 
 Nyt palvelimelle voi yhdistää samassa verkossa olevalla selaimella: https://x.x.x.x:10000. Vakiokäyttäjätunnus on palvelimen root-käyttäjä.
+          
+Dashboardilta voi nähdä tietoja palvelimen resurssien käytöstä. "System"-sivulta voi hallita palvelimen käyttöjärjestelmää, ja "Servers"-sivulta palvelimen palveluja.
 
 Petrus Piirainen, 2018-10-01
