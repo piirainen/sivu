@@ -1,4 +1,4 @@
-﻿Virtuaalityöaseman asennus (openSUSE)
+﻿Virtuaalityöaseman asennus (openSUSE Leap 15)
 
 QEMU on virtualisointiohjelma pääosin Linux-käyttöjärjestelmille. Jotta QEMU:n saa pihisemään, tarvitsee kulissien takana toimivan hypervisiorin esim. Xenin tai KVM:n, ja lisäksi vaihtoehoisen graafisen hallintaohjelman. Tässä dokumentissa käytämme KVM:ää ja virt-manager GUI:ta openSUSE Linux-käyttöjärjestelmällä, ja asennamme Windows Server 2016:n.
 

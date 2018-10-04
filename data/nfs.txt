@@ -1,4 +1,4 @@
-﻿NFS-palvelin (openSUSE)
+﻿NFS-palvelin (openSUSE Leap 15)
 
 Linux-palvelimelle voi tehdä turvallisen NFS-verkkokansion vsftpd-ohjelmalla.
 

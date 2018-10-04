@@ -1,4 +1,4 @@
-﻿Palvelimen etähallinta Webminillä (openSUSE)
+﻿Palvelimen etähallinta Webminillä (openSUSE Leap 15)
   
 Webmin mahdollistaa palvelimien valvonnan ja hallinnan verkon kautta.
 Webmin asennetaan palvelimelle joko valmiista reposta, tai manuaalisesti Webminin verkkosivulta.

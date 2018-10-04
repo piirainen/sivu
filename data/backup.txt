@@ -1,0 +1,19 @@
+﻿Palvelimen varmuuskopiointi ja palautus (Windows Server 2016)
+
+Windows Serverille voi asentaa "Server Backup"-ohjelman Server Managerista.
+
+Varmuuskopiointi määritetään "Backup Scedule"-napista. Voit valita tehdäänkö kaikesta varmuuskopio, vai vaan tietyistä hakemistoista tai osioista. Ohjelma kysyy milloin varmuuskopiointi tehdään, ja tallennetaanko se paikalliselle levylle vai verkkokansioon.
+
+Verkoon kopioidessa täytyy kirjautua sisään käyttäjällä jolla on ylläpitäjän oikeudet paikalliselle koneelle ja kirjoitusoikeudet verkkokansioon.
+Lopuksi näet kaikki kohteet mistä tehdään kopio.
+
+Nyt voit nähdä "Server Backup"-ohjelmassa vanhat varmuuskopiot, ja milloin seuraava kopio on ajoitettu. Voit myös valita tehdä varmuuskopion manuaalisesti tallennettuja asetuksia käyttäen.
+
+Varmuuskopion voi palauttaa painamalla ohjelmassa "Recover"-painiketta.
+Ohjelma kysyy varuuskopion sijainnin, ja minkä version siitä se palauttaa. Voit valita tarkan sijainnin kohteista jotka palautetaan.
+Valitset minne kopiot palautetaan, ja ylikirjoitetaanko olemassa olevat tiedostot.
+Palautus on nyt tehty.
+
+Mikäli kohdejärjestelmä ei ole käynnistettävissä esim. levyvian jäljiltä, varmuuskopion voi palauttaa käynnistämällä kone Windows Server-asennusmedialta ja avaamalla "System Image Recovery". Ohjelmassa voit palauttaa kopion paikalliselta levyltä, tai yhdistää verkkoon ja verkkokansioon.
+
+Petrus Piirainen, 2018-10-04
