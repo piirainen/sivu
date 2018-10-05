@@ -1,3 +1,10 @@
 ﻿DHCP-palvelin (openSUSE Leap 15)
 
-DHCP-palvelin määrittää verkon laitteiden IP-osoitteet automaattisesti.
+DHCP-palvelin määrittää verkon laitteiden IP-osoitteet automaattisesti. DHCP-palvelinta tarvitaan esimerkiksi Active Directoryyn.
+
+DHCP-palvelun saa Linux-serverille asentamalla dhcp-server paketti. DHCP-palvelun asetukset ovat /etc/dhcpd.conf-tiedostossa, jonka konfiguroimiseen voi käyttää esim. Webminiä tai YaST:ia.
+
+Luodaksesi uuden subnetin, valitse IP-osoite kuten 10.0.0.0 ja sopiva maski kuten 255.255.255.0. Valitse IP-alue asiakkaille kuten 10.0.0.100-10.0.0.200, DNS-palvelimen osoite mitä asiakkaat tulevat käyttämään, ja aika minuutteina kuinka usein IP-osoitteet päivittyvät.
+
+DHCP-palvelu käynnistetään komennolla "systemctl start dhcpd.service".
+Verkossa ei saa toimia muita DHCP-palvelimia. Nyt kun asiakas yhditää verkkoon 10.0.0.0, hän saa automaattisesti IP-osoitteen.
