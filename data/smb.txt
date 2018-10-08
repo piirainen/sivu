@@ -13,4 +13,6 @@ Tässä tapauksessa pitää muistaa chmodata hakemiston käyttöoikeudet kuntoon
 Kun taas vaikka /smb/priv/-hakemiston voi määritellä että vain tietyt käyttäjät tai tiettyyn ryhmään kuuluvat voivat kirjautua linjoilla "valid users=käyttäjä" tai "valid users=@ryhmä".
 Käyttäjille täytyy määritellä erilinen salasana jotta he pääsevät kirjautumaan salattuihin kansioihin komennolla "smbpasswd käyttäjä".
 
+Kansioon voi Windowsilla yhdistää palvelimen IP:llä (\\x.x.x.x\) joko lisäämällä se verkkokansiona explorerin verkkosijantiosiosta, tai "Computer"-osiosta kiinnittämällä se levynä.
+
 Petrus Piirainen, 2018-10-02

@@ -2,14 +2,16 @@
 
 Linux-palvelimelle voi tehdä turvallisen NFS-verkkokansion vsftpd-ohjelmalla.
 
-Ensin palvelimelle kuuluu asentaa vsftd-paketti suosikkipakettimanageristasi, ja asettaa kiinteä IP-osoite. Myös portit 30000-30100 ja 20-21 on hyvä avata nyt, esim. firewall-cmd:tä käyttäen.
+Ensin palvelimelle kuuluu asentaa vsftd-paketti suosikkipakettimanageristasi, ja asettaa kiinteä IP-osoite. Myös portit 30000-30100 ja 20-21 on hyvä avata nyt esim. firewall-cmd:tä käyttäen.
 
-Nyt voi kokeilla pystyykö palvelimeen yhdistämään. vsftpd käynnistetään "service vsftpd start"-komennolla, ja yhdistämme jollain muulla samassa verkossa olevalla laitteen selaimella palvelimen ip-ositteeseen, tyylillä ftp://x.x.x.x/.
+Nyt voi kokeilla pystyykö palvelimeen yhdistämään. vsftpd käynnistetään "service vsftpd start"-komennolla, ja yhdistämme jollain muulla samassa verkossa olevalla laitteen selaimella palvelimen ip-ositteeseen, ftp://x.x.x.x/.
 
-Mikäli kaikki on kunnossa, voimme seuraavaksi siirtyä vsftpd:n konfiguroimiseen joko /etc/vsftpd.conf osoiteesta löytyvästä tiedostosta, tai openSUSE:n tapauksessa "yast2 ftp-server" gui:ta käyttäen. Alkuperäisestä tiedostosta on joka tapauksessa hyvä tehdä kopio, esim. vsftpd.conf.old.
+Mikäli kaikki on kunnossa, voimme seuraavaksi siirtyä vsftpd:n konfiguroimiseen joko /etc/vsftpd.conf osoiteesta löytyvästä tiedostosta tai SUSE:n tapauksessa "yast2 ftp-server" ui:ta käyttäen. Alkuperäisestä tiedostosta on joka tapauksessa hyvä tehdä kopio, esim. vsftpd.conf.old.
 
 Aseta kirjautuneille käyttäjille hakemisto, jonka chmod 775:sit aiemmin. Laita "chroot" päälle, ettei käyttäjät pääse alempiin järjestelmän hakemistoihin käsiksi. Ota anonyymit kirjautumiset pois käytöstä, ja valitessasi salli uploadaaminen.
 
-Käynnistä vsftpd-palvelu uudelleen. Nyt tietokoneen käyttäjät voivat kirjautua palvelimelle, ja pääsevät käyttämään asetettua hakemistoa.
+Kansion voi kiinnittää Linux-koneilla mount.nfs komennolla tai esim. KDE:n tai GNOME:n verkkokansio-ominaisuudella.
+
+Windowsilla tarvitset Enterprise- tai Server-version että voit asentaa NFS-palvelun. Silloin kansio kiinnitetään lisäämällä ftp://x.x.x.x/ verkkosijaintina explorerista.
 
 Petrus Piirainen, 2018-10-01
