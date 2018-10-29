@@ -15,4 +15,4 @@ Käyttäjille täytyy määritellä erilinen salasana jotta he pääsevät kirja
 
 Kansioon voi Windowsilla yhdistää palvelimen IP:llä (\\x.x.x.x\) joko lisäämällä se verkkokansiona explorerin verkkosijantiosiosta, tai "Computer"-osiosta kiinnittämällä se levynä.
 
-Petrus Piirainen, 2018-10-02
+P. Piirainen, 2018-10-02

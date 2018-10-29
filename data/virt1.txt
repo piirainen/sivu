@@ -20,4 +20,4 @@ Asennus hoituu normaalisti, paitsi että joudut asentamaan VirtIO-ajurit asennus
 
 Asennuksen suoritettua löydät itsesi virtuaaliselta Windows-työpöydältä. Asenna VirtIO ajurit verkko-ohjaimelle jotta saat muodostettua yhteyden internetiin.
 
-Petrus Piirainen, 2018-09-10
+P. Piirainen, 2018-09-10

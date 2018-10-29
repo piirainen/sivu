@@ -16,4 +16,4 @@ Käyttäjiä voi kopioida nopeuttaaksesi useiden tilejä kerralla luontia. Luoma
 
 Toimialueen käytäntöjä voi hallita ”Group Policy Management”:ista. Erillisille OU:lle voi luoda ”Group Policy Object”:in, jolla voi esim. muuttaa salasanojen vaatimuksia.
 
-Petrus Piirainen, 2018-09-26
+P. Piirainen, 2018-09-26

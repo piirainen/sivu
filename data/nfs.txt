@@ -14,4 +14,4 @@ Kansion voi kiinnittää Linux-koneilla mount.nfs komennolla tai esim. KDE:n tai
 
 Windowsilla tarvitset Enterprise- tai Server-version että voit asentaa NFS-palvelun. Silloin kansio kiinnitetään lisäämällä ftp://x.x.x.x/ verkkosijaintina explorerista.
 
-Petrus Piirainen, 2018-10-01
+P. Piirainen, 2018-10-01

@@ -11,4 +11,4 @@ Nyt palvelimelle voi yhdistää samassa verkossa olevalla selaimella: https://x.
           
 Dashboardilta voi nähdä tietoja palvelimen resurssien käytöstä. "System"-sivulta voi hallita palvelimen käyttöjärjestelmää, ja "Servers"-sivulta palvelimen palveluja.
 
-Petrus Piirainen, 2018-10-01
+P. Piirainen, 2018-10-01
