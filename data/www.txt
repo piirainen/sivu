@@ -1,6 +1,6 @@
 ﻿Käytämme documentissa openSUSE-palvelinta.
 
-Palvelimelle voi kirjautua etänä käyttäen SSH:ta esim. PuTTY-ohjelmalla. SSH vaatii että portti 22 on auki. Portin voi avata SUSE:n asennusohjelmasta, tai myöhemmin firewall-cmd ohjelmalla. Syntaksi portin avaamiseen on ”firewall-cmd –permanent –zone=public –add-port=22/tcp”. Lopuksi lataa palomuuri valinnalla –reload.
+Palvelimelle voi kirjautua etänä käyttäen SSH:ta esim. PuTTY-ohjelmalla. SSH vaatii että portti 22 on auki. Portin voi avata SUSE:n asennusohjelmasta, tai myöhemmin firewall-cmd ohjelmalla. Komento portin avaamiseen on ”firewall-cmd –permanent –zone=public –add-port=22/tcp”. Lopuksi lataa palomuuri valinnalla –reload.
 
 Nyt palvelimelle voi kirjautua PuTTY:stä palvelimen IP:tä käyttäen. Kiinteä IP-osoite asetetaan SUSE:lla YaST:in verkkomoduulia käyttäen. IP-osoitteen voi varmistaa komennolla ”ip a”.
 
@@ -12,7 +12,7 @@ Uuden /smb/-hakemiston lupia täytyy muuttaa että samba-käyttäjät voivat kä
 
 ”valid users=@samba” tarkoittaa että vain ”samba”-ryhmässä olevat käyttäjät voivat kirjautua. Luomme uuden ryhmän komennolla ”groupadd samba” ja teemme uuden käyttäjän joka kuuluu kyseiseen ryhmään komennolla ”useradd -G samba kayttaja”. Teemme käyttäjälle salasanan jolla hän pääsee kirjautumaan verkkokansioon komennolla ”smbpasswd -a kayttaja”.
 
-Nyt voimme lisätä uuden verkkokansion Windowsiin käyttäen palvelimen IP-osoitetta ja kirjautumalla juuri tehdyllä käyttäjällä.
+Nyt voimme lisätä uuden verkkokansioyhteyden Windowsiin käyttäen palvelimen IP-osoitetta ja kirjautumalla juuri tehdyllä käyttäjällä.
 
 Itse www-palvelin saadaan pystyyn asentamalla ”httpd”-paketti suosikkipakettimanageristasi. Palvelun voi konfiguroida joko /etc/httpd.conf-hakemistosta, tai YaST:in http-server moduulista.
 Ensiasennusohjelma kysyy mistä tulevia yhteyksiä palvelin kuuntelee. Voit myös valita avata tarvitun 80-portin. Itse ohjelmassa muutamme ”main host”-sivulta ”document root”:in ja ”directory”:n osoittamaan  /smb/www-hakemistoon.
