@@ -1,0 +1,10 @@
+﻿Palvelimen hallinta (CentOS 7)
+
+CentOS 7 käyttää NetworkManageria verkon hallintaan vakiona. Voit käyttää nmtui-ohjelmaa konfiguroidaksesi verkkoasetukset. Varmista "ip" ja "ping"-komennoilla että ip-osoite on toiminnassa ja verkkoyhteys toimii.
+Palomuurin hallintaan voi käyttää firewall-cmd:tä. Portin tai palvelun voi päästää läpi "--permenent --add-port/service="-komennolla.
+
+CentOS käyttää yum-pakettimanageria. Uusia asennuslähteitä lisätään tekemällä .repo loppuinen tekstitiedosto /etc/yum.repos.d-polkuun. Tiedosto kuuluu sisältää name=, baseurl=, ja enabled= -arvot. Saatat myös joutua asentamaan repon PGP-avaimen "wget"- ja "rpm --import"-komennoilla. Ohjelmia asennetaan repoista "yum install"-komennolla.
+
+Käyttäjiä lisätään "adduser"-komennolla. Käyttäjille asetetaan salasana "passwd":llä, ja lisätään ryhmiin "useradd -g":llä.
+
+P. Piirainen

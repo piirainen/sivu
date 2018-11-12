@@ -1,0 +1,9 @@
+﻿Webmin (CentOS 7)
+
+Webmin on web-selaimesta käyttettävä hallintaohjelma Linux-palvelimille.
+Webmin asennetaan lisäämällä http://download.webmin.com/webmin/yum-repo, ja asentamalla se yumilla. Myös portti 10000/tcp pitää sallia palomuurissa.
+
+Nyt Webminiin voi kirjautua https://x.x.x.x:10000 osoitteesta palvelimen root-tilillä.
+Palvelimelle asennetut palvelut kuten Samba näkyvät "Servers"-välilehdessä, ja niitä pystyy hallitsemaan sieltä.
+
+P. Piirainen
