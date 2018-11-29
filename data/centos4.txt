@@ -1,0 +1,11 @@
+﻿RAID (CentOS 7)
+
+Samballa voi jakaa tiedostoja verkon yli Windows- ja Linux-alustoilla.
+CentOS 7:lle Samban-palvelun saa "samba"-paketilla. Samba vaatii ettei SELinux tai palomuuri estä palvelua. Palvelun nimi on "smb", jolla sen voi käynnistää.
+
+Webmin-ohjelmaa voi hyödyntää verkkokansion luomisessa. Luotuasi uuden kansion "Samba"-moduulissa, voit rajoittaaa ketä pystyvät lukemaan sitä lisäämällä uuden ryhmän "Read/write groups":eihin. Lisää haluttu samba-käyttäjä uuteen ryhmään, ja tee sille samba-salasana "smbpasswd"-ohjelmalla.
+
+Kansioon voi kirjautua toisella Linux-koneella "smbclient"-ohjelmalla. Verkkokansioon yhdistetään "smbclient -U käyttäjä \\\\x.x.x.x\\kansio"-komennolla.
+Windows-koneille voi lisätä verkkolevyn helposti Explorerissä painamalla "Computer" ja "Map Network Drive".
+
+P. Piirainen

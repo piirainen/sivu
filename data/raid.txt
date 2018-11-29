@@ -1,0 +1,12 @@
+﻿RAID (CentOS 7)
+
+RAID (Redundant Array of Independent Disks) suojaa dataa levyvioilta ja parantaa lukunopeutta kirjoittamalla tiedot usealle eri levylle.
+Yleisimpä RAID:n muotoja ovat 1, 6 ja 10. RAID 1 kirjoittaa saman datan kahdelle eri levylle, ja suojaa toisen tuhoutumisen varalta. RAID 6 vaatii vähntään 4 levyä, antaa puolet kokonaisesta levytilasta käytettäväksi, ja suojaa kaiken datan kahden levyn tuhoutumisen varalta.
+
+CentOS 7 antaa mahdollisuuden luoda ohjelmistotyyppisen RAID:n asennusohjelmassa. "Device Selection"-näkymässä valitse kaikki levyt joita halutaan käyttää koneessa.
+Valitse root-osio, ja ota "Device Type"-valikosta "RAID". "RAID Level"-valikosta valitse "RAID 6". Tee sama /boot-osiolle, mutta valitse RAID-tasoksi "RAID 1".
+
+Nyt tietokoneen /-ja /boot-osiot ovat suojattu levyvioilta. /boot-osio ei ole RAID 6-osiolla että RAID:n voi rakentaa uudelleen vian ilmetessä.
+RAID-osion nimen voi nähdä fdisk -l komennolla (esim. /dev/sd126). Voit nähdä RAID:n tilan mdadm ohjelmalla (mdadm --detail /dev/sd126). 
+Mikäli jokin RAID-levy tuhoutuu, voit kirjautua järjestelmään ja katsoa fdisk -l komennolla mikä levyistä puuttuu. Osioi tuore levy fdisk-ohjelmalla, ja lisää se RAID:iin mdadm:llä. RAID:n uudelleenrakennus alkaa itsestään.
+P. Piirainen, 2018-11-3

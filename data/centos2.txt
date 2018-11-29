@@ -5,5 +5,6 @@ Webmin asennetaan lisäämällä http://download.webmin.com/webmin/yum-repo, ja 
 
 Nyt Webminiin voi kirjautua https://x.x.x.x:10000 osoitteesta palvelimen root-tilillä.
 Palvelimelle asennetut palvelut kuten Samba näkyvät "Servers"-välilehdessä, ja niitä pystyy hallitsemaan sieltä.
+"Dashboard":lta näkee resurssien käytön ja sieltä voi myös päivittää paketit.
 
 P. Piirainen

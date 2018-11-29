@@ -16,4 +16,4 @@ Palautus on nyt tehty.
 
 Mikäli kohdejärjestelmä ei ole käynnistettävissä esim. levyvian jäljiltä, varmuuskopion voi palauttaa käynnistämällä kone Windows Server-asennusmedialta ja avaamalla "System Image Recovery". Ohjelmassa voit palauttaa kopion paikalliselta levyltä, tai yhdistää verkkoon ja verkkokansioon.
 
-P. Piirainen
+P. Piirainen, 2018-10-04
