@@ -1,23 +1,22 @@
 ﻿Kernel-Virtuaalikone (openSUSE Leap 15)
 
-Intelin VT-d-teknologia mahdollistaa PCI-laitteiden läpiviennin virtuaalikoneille. Prossun ja emulevyn täytyy tukea VT-d:tä. Tarvitset myös KVM (Kernel Virtual Machine)-pohjaisen virtualisointiohjelman, kuten QEMU/KVM:n.
+Intelin VT-d-teknologia mahdollistaa PCI-laitteiden läpiviennin virtuaalikoneille. Molemman prossun ja emulevyn täytyy tukea VT-d:tä. Tarvitset myös KVM (Kernel Virtual Machine)-pohjaisen virtualisointiohjelman kuten QEMU/KVM:n.
 
-Jos viet näytönohjaimesi virtuaalikoneelle kuten tässä kirjoituksessa, tarvitset toisen näyttiksen jota käytät  hostilla, kuten vaikka prosessorin iGPU:n. Voit yhdistää kummatkin samaan monitoriin ja vaihtaa kanavaa kun haluat käyttää eri konetta.
+Jos läpiviet näytönohjaimesi virtuaalikoneelle kuten tässä kirjoituksessa, tarvitset toisen näyttiksen jota käytät hostilla, kuten vaikka prosessorin iGPU:n. Voit yhdistää kummatkin samaan monitoriin ja vaihtaa kanavaa kun haluat käyttää eri konetta.
 Myös PCI-verkko- ja äänikortti ovat hyödyllisiä lisiä.
 
-VT-d:n aktivoiminen ja halutun PCI-laitteen eristäminen on melko yksinkertaista, ja asiasta löytyy useita kirjoituksia Linux-foorumeilta. Askel sisältää muutaman tekstitiedoston tekemisen ja kernelin asetuksien muuttamisen.
+PCI-läpiviennin aktivoiminen ja halutun PCI-laitteen eristäminen on melko yksinkertaista, ja asiasta löytyy useita kirjoituksia Linux-foorumeilta. Askel sisältää muutaman tekstitiedoston luomisen, ja kernelin parametrien muuttamisen.
 
 Seuraavaksi tehdään virtuaalikone QEMU:lle virt-manager GUI:ta hyödyntäen.
-Virtuaalikoneen teko on melko itseselitteistä; laita UEFI ja Q35-piirisarja päälle, lisää halutut PCI-laitteet ja muut tyypilliset höysteet.
+Virtuaalikoneen teko on myös itseselitteistä; laita UEFI ja Q35-piirisarja päälle, lisää halutut PCI-laitteet ja muut tyypilliset virtuaalikoneen höysteet.
 Lisää tilapäisesti Cirrus-grafiikkamoduuli ja virtuaalinen hiiri, sekä näppäimistö jotta voit asentaa paremman ratkaisun myöhemmin.
-Voit laittaa virtuaalilevylle ja verkkokortille virtio-tilan päälle ja ladata Red Hatilta virtio-ajureiden levykuvan, joka mahdollistaa liki alkuperäisen suorituskyvyn.
-Asentaessa Windowsia virtio-levylle, joudut asentamaan vfio-ajurit asennusohjelmassa manuaalisesti.
+Voit laittaa virtuaalilevyille ja verkkokortille virtio-tilan päälle, ja ladata Red Hatilta virtio-ajureiden levykuvan joka mahdollistaa liki alkuperäistä vastaavan suorituskyvyn.
 
 Kun saat käyttiksen asennettua ja menet asentamaan Nvidian ajureita, huomaat kuinka ne eivät toimi lainkaan. Ei-Quadro sarjalaisten näytönohjaimien ajureiden asennus estetään virtuaalikoneissa. Joudut lataamaan Githubista PowerShell scriptin joka korjaa ajurit.
 
 Huomaat myös että virtuaalinen hiiri on melko epätarkka. Itse pidän "Barrier"-ohjelmasta, jonka avulla voit saumattomasti jakaa hostin hiiren ja näppäimistön lähiverkon yli.
 
-Kun käytät virtuaalisia äänikortteja, voit valita joko myöhässä tulevan äänen tai rätisevän äänen. Itse käytän virtuaalikoneelle läpivietyä äänikorttia jonka yhdistän hostin äänikorttiin optisella kaapelilla.
+Kun käytät virtuaalisia äänikortteja, voit valita joko myöhässä tulevan äänen tai rätisevän äänen. Itse käytän virtuaalikoneelle läpivietyä äänikorttia jonka yhdistän hostin äänikorttiin optisella audiokaapelilla.
 
 On myös hyvä idea laittaa hostille samba-palvelu päälle helpottaaksesi tiedostojen jakamista.
 

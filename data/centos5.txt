@@ -1,0 +1,8 @@
+﻿nginx (CentOS 7)
+
+Nginx on moderni ja tehokas verkkopalvein Linuxille ja BSD:lle.
+
+Nginx:n yum-repo RHEL:llä ja CentOS:lla on eple-release.
+Kun nginx on asennettu, http-portti avattu, ja 'nginx'-palvelu käynnistetty, palvelimen testisivulle voi yhdistää lähiverkosta käyttämällä palvelimen IP-osoitetta.
+
+Verkkosivuja pystyy muokkaamaan ja lisäämään palvelimelle /etc/nginx/nginx.conf-tiedostossa server {}-osiossa.
