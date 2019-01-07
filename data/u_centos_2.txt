@@ -1,0 +1,11 @@
+﻿Verkkokansiot (CentOS 7)
+
+Yleisimipä tiedostojakoprotokollia ovat Samba ja NFS.
+
+Samba mahdollistaa tiedostojen jaon Windows- ja *nix laitteiden välillä. Samballa on kattavat turvallisuusasetukset; voit esim. valita että vain tietyisssä ryhmissä olevat käyttäjät voivat lukea tai kirjoittaa tiettyyn verkkojakoon, tai että käyttäjät pääsevät vain omaan /home-hakemistoon.
+
+NFS:llä on hieman parempi suorituskyky, mutta tuki Windows-alustoilla on puutteellinen ja jakojen turvallisuus hoituu ainoiastaan asiakkaiden IP-osoitteiden "whitelistillä", ja palvelimen hakimistojen oikeuksilla.
+
+Samba löytyy CentOSilla "smbd"-palveluna, kun taas NFS:ää voi käyttää "vsftpd":llä.
+
+Smbd:n voi konfiguroida /etc/smb/smb.conf-tiedostossa, ja vsftpd:n /etc/vsftpd.conf:ssä. Kummankin palvelun hallitsemiseen voi käyttää edellisessä artikkelissa mainittua Webminiä.

@@ -1,0 +1,11 @@
+﻿Päätettömän palvelimen hallinta (CentOS 7)
+
+Yleisin tapa hallita päätettömiä Linux koneita on toisella tietokoneella SSH-protokollaa käyttäen joko sarja- tai ethernetyhteydellä.
+
+SSH:tä käyttäen pääsee omalle istunnolle komentolinjalle. SSH vaatii että portti 22 on käytettävissä. SSH:lla voi jopa käyttää graafisia ohjelmia "X11Forwarding"-ominaisuudella.
+
+Linux-palvelimille löytyy myös verkkoselaimesta käyttäviä hallintaohjelmia, kuten Webmin joka hyödyntää Apache-palvelua.
+
+Webmin asennetaan CentOS-palvelimelle Webminin omasta yum-reposta. Webmin toimii palveluna, ja käyttää porttia 10000.
+
+Webminin graafisesta päätteestä voi asentaa ja säätää kaikenlaisia palvelimelle asennettuja palveluja. Myös palvelimen resurssien käyttöä ja pakettien päivitysten saatavuutta on helppo seurata.

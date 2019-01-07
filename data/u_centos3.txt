@@ -1,7 +1,7 @@
 ﻿RAID (CentOS 7)
 
-RAID suojaa dataa levyvioilta ja parantaa lukunopeutta käyttämällä useaa eri levyä yhtenä.
-Yleisiä RAID:n muotoja ovat 1 ja 6. RAID 1 kirjoittaa saman datan kahdelle eri levylle ja suojaa toisen tuholta. RAID 6 vaatii vähintään neljä levyä, suojaa kahden levyn tuholta, ja antaa enemmän tilaa käytettäväksi.
+RAID suojaa dataa levyvioilta ja parantaa lukunopeutta käyttämällä useaa eri levyä samanaikaisesti.
+Yleisiä RAID:n muotoja ovat 1, 6, ja 0+1. RAID 1 kirjoittaa saman datan kahdelle eri levylle ja suojaa toisen tuholta. RAID 6 vaatii vähintään neljä levyä, suojaa kahden levyn tuholta, ja antaa enemmän tilaa käytettäväksi. RAID 0+1 antaa Raid 0:n suorituskyvyn, ja RAID 1:n turvan levyvioilta.
 
 CentOS 7 antaa mahdollisuuden luoda ohjelmistotyyppisen RAID:n asennusohjelmassa.
 Valitse levyhallinnasta kaikki levyt joille haluat asentaa.
@@ -11,5 +11,3 @@ Tee sama /boot-osiolle, mutta valitse RAID-tasoksi "RAID 1".
 Nyt tietokoneen /-ja /boot-osiot ovat suojattu levyvioilta. /boot-osio kuuluu olla RAID 1 osiolla että järjestelmä voi lukea dataa käynnistyessä.
 RAID-osion nimen voi nähdä fdisk -l komennolla (esim. /dev/sd126). Voit nähdä RAID:n tilan mdadm ohjelmalla (mdadm --detail /dev/sd126). 
 Mikäli jokin RAID-levy tuhoutuu, voit kirjautua järjestelmään ja katsoa fdisk -l komennolla mikä levyistä puuttuu. Osioi tuore levy fdisk-ohjelmalla, ja lisää se RAID:iin mdadm:llä. RAID:n uudelleenrakennus alkaa itsestään.
-
-P. Piirainen

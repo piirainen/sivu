@@ -1,0 +1,5 @@
+﻿CentOS on ilmainen versio Red Hatin Debian-peräisestä Red Hat Enterpise Linux:ista. CentOS on yksi suosituimmista Linux-distroista www-palvelimilla.
+
+CentOS/RHEL:n repoissa on melko vanhoja ja luotettavia paketteja jotka saavat turvapäivityksiä, joka tekee CentOS:ista hyvän valinnan kun palvelimen luotettava toiminta on tärkeintä.
+
+Nykyinen CentOS/RHEL versio on 7. Red Hat julkaisee usean vuoden välein uuden version, jolloin paketit muuttuvat uudemmiksi. CentOS 7:ää tuetaan vuoteen 2024 asti.

@@ -1,0 +1,11 @@
+﻿Gentoo on oikeissa käsissä luotettava, vapautta antava, ja erittäin optimoitava Linux-distro.
+
+Gentoolle ei ole asennusohjelmaa, vaan järjestelmä asennetaan boottaamalla live CD:lle, luomalla järjestelmän perusta purkamalla "stage3" tar-paketti, ja asentamalla loput halutuista ohjelmista "Portage"-pakettimanagerilla.
+
+Portage kääntää paketit lähdekoodista paikallisesti, joten ohjelmiin voi lisätä tai poistaa ominaisuuksia "USE"-lipuilla.
+Jos et halua koneellesi ipv6:tta, lisäät make.conf tiedostoon "USE=-ipv6". Tai jos haluat ohjelmiin PulseAudio-tuen, niin lisäät: "USE=-ipv6 pulseaudio".
+
+Myös asentaessa itse kerneliä voit lisätä tai poistaa ominaisuuksia "menuconfig"-ohjelmalla; voit poistaa ipv6-tuen kokonaan, olla sisältämättä tiettyjä laiteajureita, poistaa ei-tarvittuja tiedostojärjestelmiä, ja ylimääräisiä turvariskejä.
+
+Voit asentaa kernelin ominaisuuksia "moduuleina", jolloin ne menevät /lib/modules-hakemistoon kernel-tiedoston sijasta.
+Tämä voi olla hyödyllistä, sillä et joudu käynnistämään järjestelmää uudelleen kun päivität moduuleina olevia ominaisuuksia.
